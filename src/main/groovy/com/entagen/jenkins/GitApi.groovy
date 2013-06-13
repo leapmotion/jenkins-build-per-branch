@@ -4,7 +4,7 @@ import java.util.regex.Pattern
 
 class GitApi {
     String gitUrl
-    Pattern branchNameFilter = null
+    Pattern branchNameFilter = Pattern.compile("arm-linux");
 
     public List<String> getBranchNames() {
         String command = "git ls-remote --heads ${gitUrl}"
