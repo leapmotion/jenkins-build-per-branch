@@ -121,7 +121,7 @@ class JenkinsApi {
 
     protected String buildViewPath(String pathSuffix, String... nestedViews) {
         List elems = nestedViews.findAll { it != null }
-        String viewPrefix = elems.collect { "view/${it}" }.join('/')
+        String viewPrefix = elems.collect { "user/tombuilder/my-views/view/${it}" }.join('/')
 
         if (viewPrefix) return "$viewPrefix/$pathSuffix"
 
